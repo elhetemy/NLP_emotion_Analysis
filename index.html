@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Prediction</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h1 style="text-align: center; color: #333;">Emotion Prediction</h1>
+        <form action="/predict" method="post" style="margin-bottom: 20px;">
+            <label for="text" style="font-weight: bold;">Enter Text:</label><br>
+            <textarea id="text" name="text" rows="4" cols="50" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea><br>
+            <input type="submit" value="Predict" style="margin-top: 10px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        </form>
+        {% if prediction %}
+        <div style="background-color: #fff; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <h2 style="color: #333;">Predicted Emotion: {{ prediction }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
